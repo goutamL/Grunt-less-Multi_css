@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Grunt --- Lessss</title>
+
+    <link rel="stylesheet" type="text/css"  href="main.css">
+    <script>
+        function changeCss(){
+        var cmbSel = document.getElementById("cmbTenant");
+        var tenantName = cmbSel.value;
+        document.getElementsByTagName("link")[0].setAttribute( "href", tenantName+".css");
+        }
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jquery.url.js"></script>
+
+<script>
+//     function func1() {
+//   alert("This is the first.");
+// }
+// window.onload=func1;
+
+$(function(){
+
+    console.log(url('protocol'));
+    var path =url('path');
+    console.log(path);
+
+if (path == "/school1") {
+var css_link = $("<link>", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "school1.css"
+    });
+    css_link.appendTo('head');
+}
+else if(path == "/school2")
+{
+    var css_link = $("<link>", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "school2.css"
+    });
+    css_link.appendTo('head');
+}
+
+    
+});
+
+</script>
+
+
+</head>
+
+<body>
+    <select id="cmbTenant" onchange="changeCss()">
+      <option value="">Select Tenant</option>
+      <option value="school1">School1</option>
+      <option value="school2">School2</option>
+    </select>
+
+
+    <p>dfgrtg rtyrtytryrt ryrtf</p>
+
+    <ul>
+        <li>
+            ertfegftertgergt
+        </li>
+        <li>
+            grdfhtujhhjew
+        </li>
+        <li>
+            dfskljjhtrfewrikjrertui
+        </li>
+    </ul>
+    <div id="circle">
+    </div>
+
+    <div id="small-circle">
+
+    </div>
+
+    <div id="big-circle">
+
+    </div>
+
+
+    <div class="one">dsdsdsd</div>
+    <div class="two">sssdsd</div>
+    <div class="three">sdsdss</div>
+    <div class="four">sdsdsd</div>
+    <div class="five">sdssdsas</div>
+    
+
+</body>
+
+</html>

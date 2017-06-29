@@ -1,0 +1,56 @@
+@background-color: #ffffff;
+@text-color: #000;
+@border:2px solid #000;
+
+p{
+  background-color: @background-color;
+  color: @text-color;
+  padding: 15px;
+}
+
+ul{
+  background-color: @background-color;
+}
+
+li{
+  color: @text-color;
+}
+
+#circle{
+  background-color: green;
+  border-radius: 100%;
+}
+
+#small-circle{
+  width: 50px;
+  height: 50px;
+  color:@text-color;
+  #circle
+}
+
+#big-circle{
+  width: 100px;
+  height: 100px;
+  #circle
+}
+
+
+@base: #663333;
+@lighter1: lighten(spin(@base, 5), 10%);
+@lighter2: lighten(spin(@base, 10), 20%);
+@darker1: darken(spin(@base, -5), 10%);
+@darker2: darken(spin(@base, -10), 20%);
+
+#hh{
+    height: 100px;
+    width:60px;
+    border: @border;
+    background-color: silver;
+    float: left;
+}
+
+.one   {color: @base;#hh}
+.two   {color: @lighter1;#hh}
+.three {color: @lighter2;#hh}
+.four  {color: @darker1;#hh}
+.five  {color: @darker2;#hh}
